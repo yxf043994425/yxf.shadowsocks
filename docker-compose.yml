@@ -1,0 +1,11 @@
+version: '2'
+services:
+  shadowsocks:
+    image: "shadowsocks/shadowsocks-libev:latest"
+    container_name: "shadowsocks"
+    restart: always
+    ports:
+      - "2020:8388"
+    environment:
+      - METHOD=aes-256-gcm
+      - PASSWORD=yxf.vpn.cc
